@@ -1,8 +1,11 @@
 #!/usr/bin/bash
-# build.sh
-set -o errexit  # exit on error
+set -o errexit
 
+# Install dependencies first
 pip install -r requirements.txt
+
+# Change to the project directory
+cd searchProject
 
 # Collect static files
 python manage.py collectstatic --no-input
